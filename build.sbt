@@ -15,5 +15,6 @@ libraryDependencies ++= Seq(
   "org.webjars" % "bootstrap" % "3.3.2-2",
   "org.webjars" % "jquery" % "2.1.3",
   "org.webjars" % "jquery-ui" % "1.11.3",
-  "org.webjars" % "bootstrap-glyphicons" % "bdd2cbfba0"
+  "org.webjars" % "bootstrap-glyphicons" % "bdd2cbfba0",
+  "com.pubnub" % "pubnub" % "3.7.2"
 )

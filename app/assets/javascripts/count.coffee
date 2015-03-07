@@ -1,21 +1,23 @@
-remove = (marchant) ->
-  console.log(marchant + 'remove!')
+expire = (merNo) ->
+  $('#mer' + merNo + '_tr').remove()
+  $('#message').append("order for the merchant " + merNo + " is expired.</br>")
 
 init = ->
+  now = new Date()
+  exp1 = new Date(now.getTime() + (90 * 1000))
+  exp2 = new Date(now.getTime() + (80 * 1000))
 
-  newYear = new Date()
-  newYear = new Date(2015, 3 - 1, 7, 21, 59)
   $('#TimeLeft1').countdown(
     layout:'{mn} {ml}, {sn} {sl}'
-    until: newYear
+    until: exp1
     onExpiry: ->
-      remove('marchant1')
+      expire(1)
   )
   $('#TimeLeft2').countdown(
     layout:'{mn} {ml}, {sn} {sl}'
-    until: newYear
+    until: exp2
     onExpiry: ->
-      remove('marchant2')
+      expire(2)
   )
 
 $(document).ready(init)

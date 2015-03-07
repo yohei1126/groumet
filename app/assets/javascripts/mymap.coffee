@@ -41,8 +41,5 @@ init = ->
         lat: mar2_loc.lat
         lng: mar2_loc.lng
   )
-  $("input:button").click((e) ->
-    console.log('test')
-  )
 
 $(document).ready(init)

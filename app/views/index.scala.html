@@ -1,0 +1,71 @@
+@(message: String)
+
+@main("Welcome to Late Night Gourmet") {
+<h1>Welcome to Late Night Gourmet</h1>
+
+<p> Your location is "東京都新宿区1丁目1番地3号"</p>
+<p>
+<!--<form method="post" id="geocoding_form">-->
+    maximum distance to the delivery spot:
+    <select name="distance">
+        <option value="1" selected>3 min</option>
+        <option value="2">5 min</option>
+        <option value="3">10 min</option>
+    </select>
+    <p>
+    <div class="input">
+        <input type="hidden" id="address" name="address" value="東京都新宿区1丁目1番地3号"/>
+        <input type="button" class="btn" value="Search marchant" />
+    </div>
+    </p>
+<!--</form>-->
+</p>
+<div id = "marchant_table">
+<table border>
+<form action="/order">
+    <input type="hidden" name="marchant" value="bento taro">
+    <tr>
+    <td>
+        <b>Bento Taro</b><br/>
+        minimum order: 5<br/>
+        current order: 3<br/>
+        <div id="TimeLeft1"></div><br/>
+        <div id="map1" class="map"/>
+    </td>
+    <td>
+        Item 1 <input type="radio" name="item" value="item1"><br/>
+        <image src="images/item1.jpg"/>
+    </td>
+    <td>
+        Item 2 <input type="radio" name="item" value="item2"><br/>
+        <image src="images/item2.jpg"/>
+    </td>
+    <td><p><input type="submit" value="order"></p></td>
+</tr>
+</form>
+
+<form action="/order">
+<input type="hidden" name="marchant" value="Restrant Shinjuku">
+<tr>
+  <td>
+        <b>Restrante Shinjuku</b><br/>
+        minimum order: 5<br/>
+        current order: 3<br/>
+        <div id="TimeLeft2"></div><br/>
+        <div id="map2" class="map"/>
+  </td>
+  <td>
+    Item 3 <input type="radio" name="item" value="item3"><br/>
+    <image src="images/item3.jpg"/>
+  </td>
+  <td>
+    Item 4 <input type="radio" name="item" value="item4"><br/>
+    <image src="images/item4.jpg"/>
+  </td>
+  <td><p><input type="submit" value="order"></p></td>
+</tr>
+</form>
+</table>
+</div>
+</p>
+}

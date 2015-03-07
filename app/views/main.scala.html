@@ -1,0 +1,27 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>@title</title>
+        <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
+        <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery-ui.min.js"))'></script>
+        <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.js"))'></script>
+        <script type='text/javascript' src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script type='text/javascript' src="javascripts/jquery.plugin.min.js"></script>
+        <script type='text/javascript' src="javascripts/jquery.countdown.js"></script>
+        <script type='text/javascript' src="/javascripts/gmaps.js"></script>
+        <script type="text/javascript" src="/javascripts/mymap.js"></script>
+        <script type="text/javascript" src="/javascripts/count.js"></script>
+        <script type="text/javascript" src="/javascripts/marchant.js"></script>
+        <style type="text/css">
+            .map {
+            width: 300px;
+            height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        @content
+    </body>
+</html>
